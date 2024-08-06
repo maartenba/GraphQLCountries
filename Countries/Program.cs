@@ -1,7 +1,19 @@
+using System.Net.Http.Headers;
+using Microsoft.VisualBasic;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient();
+builder.Services
+    .AddCountriesClient()
+    .ConfigureHttpClient(
+        configureClient: client =>
+        {
+            client.BaseAddress = new Uri("https://countries.trevorblades.com/graphql/");
+            // client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"Bearer {Constants.ApiKey}");
+        });
 
 var app = builder.Build();
 

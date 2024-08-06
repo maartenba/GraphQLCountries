@@ -6,4 +6,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <StrawberryShake_State>$(MSBuildProjectExtensionsPath)berry</StrawberryShake_State>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="StrawberryShake.Server" />
+    </ItemGroup>
+
 </Project>

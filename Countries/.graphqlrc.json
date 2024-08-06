@@ -1,0 +1,24 @@
+{
+  "schema": "schema.graphql",
+  "documents": "**/*.graphql",
+  "extensions": {
+    "strawberryShake": {
+      "name": "CountriesClient",
+      "namespace": "Countries.GraphQL",
+      "url": "https://countries.trevorblades.com/graphql/",
+      "dependencyInjection": true,
+      "strictSchemaValidation": true,
+      "emitGeneratedCode": true,
+      "records": {
+        "inputs": false,
+        "entities": false
+      },
+      "transportProfiles": [
+        {
+          "default": "Http",
+          "subscription": "WebSocket"
+        }
+      ]
+    }
+  }
+}
