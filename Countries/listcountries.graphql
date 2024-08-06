@@ -1,0 +1,19 @@
+query ListCountries {
+    countries {
+        code
+        name
+        emoji
+        continent {
+            code
+            name
+        }
+    }
+}
+
+query GetCountriesUsingCurrency($currency: String!) {
+    countries(filter: { currency: { eq: $currency } }) {
+        code
+        name
+        emoji
+    }
+}

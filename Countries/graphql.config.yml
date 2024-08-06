@@ -1,0 +1,8 @@
+schema: schema.graphql
+extensions:
+  endpoints:
+    production:
+      url: https://countries.trevorblades.com/graphql/
+      headers:
+        Authorization: Bearer ${TOKEN}
+documents: '**/*.graphql'
