@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@picocss/pico@2/css/pico.min.css" >
+    <title>@ViewData["Title"] - Countries</title>
+</head>
+<body>
+<main class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><strong>Countries</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Index</a></li>
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+</main>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
