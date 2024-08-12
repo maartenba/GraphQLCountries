@@ -18,4 +18,10 @@
       <AdditionalFiles Include="Pages\Country.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <GraphQL Update="fragments.graphql">
+        <Generator>MSBuild:GenerateGraphQLCode</Generator>
+      </GraphQL>
+    </ItemGroup>
+
 </Project>

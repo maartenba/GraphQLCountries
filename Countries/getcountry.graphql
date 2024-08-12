@@ -9,9 +9,6 @@ query GetCountry($countryCode: ID!) {
             code
             name
         }
-        continent {
-            code
-            name
-        }
+        ...Continent
     }
 }

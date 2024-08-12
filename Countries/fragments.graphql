@@ -1,0 +1,6 @@
+fragment Continent on Country {
+    continent {
+        code
+        name
+    }
+}

@@ -3,9 +3,6 @@ query ListCountries {
         code
         name
         emoji
-        continent {
-            code
-            name
-        }
+        ...Continent
     }
 }
