@@ -1,0 +1,28 @@
+﻿@page
+@model CountryModel
+@{
+    ViewData["Title"] = Model.Country.Name + " - Countries";
+}
+
+<h1><span>@Model.Country.Emoji</span> @Model.Country.Name</h1>
+
+<article>
+    <h2>Geography</h2>
+    <p>The capital of @Model.Country.Name is <strong>@(Model.Country.Capital ?? "unknown")</strong>.</p>
+    <p>@Model.Country.Name is in <strong>@Model.Country.Continent.Name</strong>.</p>
+</article>
+
+<article>
+    <h2>Currency</h2>
+    <p>The currency of @Model.Country.Name is <strong>@(Model.Country.Currency ?? "unknown")</strong>.</p>
+</article>
+
+<article>
+    <h2>Languages</h2>
+    <ul>
+        @foreach (var language in Model.Country.Languages)
+        {
+            <li>@language.Name</li>
+        }
+    </ul>
+</article>

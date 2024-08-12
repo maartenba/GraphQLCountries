@@ -15,11 +15,3 @@ query GetCountry($countryCode: ID!) {
         }
     }
 }
-
-query GetCountriesUsingCurrency($currency: String!) {
-    countries(filter: { currency: { eq: $currency } }) {
-        code
-        name
-        emoji
-    }
-}

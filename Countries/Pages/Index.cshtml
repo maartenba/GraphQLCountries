@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Countries";
 }
 
 <h1>Countries</h1>
@@ -18,7 +18,7 @@
     {
         <tr>
             <td>@country.Code</td>
-            <td>@country.Name</td>
+            <td><a asp-page="Country" asp-route-countryCode="@country.Code">@country.Name</a></td>
             <td>@country.Emoji</td>
         </tr>
     }
